@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFC">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create New Sales Order"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#0F172A"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Customer Name *"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#334155"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etCustomerName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="e.g. John Doe"
+            android:background="@android:drawable/editbox_background"
+            android:padding="12dp"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location / Address *"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#334155"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etCustomerLocation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="e.g. Entebbe, Plot 4"
+            android:background="@android:drawable/editbox_background"
+            android:padding="12dp"
+            android:inputType="textPostalAddress"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Contact *"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#334155"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etCustomerContact"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="e.g. 0770000000"
+            android:background="@android:drawable/editbox_background"
+            android:padding="12dp"
+            android:inputType="phone"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Address *"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#334155"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etCustomerEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="e.g. john@example.com"
+            android:background="@android:drawable/editbox_background"
+            android:padding="12dp"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Product *"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#334155"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/spinnerProducts"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity *"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#334155"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etOrderQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter Quantity"
+            android:background="@android:drawable/editbox_background"
+            android:padding="12dp"
+            android:inputType="number"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnSubmitOrder"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="SUBMIT ORDER"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#0D9488" />
+    </LinearLayout>
+</ScrollView>

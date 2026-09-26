@@ -1,0 +1,23 @@
+package com.nkumba.roms.models;
+
+public class Product {
+    private int id;
+    private String name;
+    private String sku;
+    private double price;
+    private int stock;
+
+    public Product(int id, String name, String sku, double price, int stock) {
+        this.id = id;
+        this.name = name;
+        this.sku = sku;
+        this.price = price;
+        this.stock = stock;
+    }
+
+    public int getId() { return id; }
+    public String getName() { return name; }
+    public String getSku() { return sku; }
+    public double getPrice() { return price; }
+    public int getStock() { return stock; }
+}
