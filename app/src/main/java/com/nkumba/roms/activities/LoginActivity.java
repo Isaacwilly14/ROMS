@@ -13,7 +13,7 @@ import com.nkumba.roms.database.DatabaseHelper;
 public class LoginActivity extends AppCompatActivity {
 
     private EditText etUsername, etPassword;
-    private TextView tvForgotPassword;
+    private TextView tvForgotPassword, tvRegister;
     private Button btnLogin;
     private DatabaseHelper dbHelper;
 
@@ -27,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
         tvForgotPassword = findViewById(R.id.tvForgotPassword);
+        tvRegister = findViewById(R.id.tvRegister);
         btnLogin = findViewById(R.id.btnLogin);
 
         btnLogin.setOnClickListener(v -> {
@@ -49,9 +50,8 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        tvForgotPassword.setOnClickListener(v -> {
-            Intent intent = new Intent(LoginActivity.this, ResetPasswordActivity.class);
-            startActivity(intent);
-        });
+        tvForgotPassword.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, ResetPasswordActivity.class)));
+
+        tvRegister.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, RegisterActivity.class)));
     }
 }

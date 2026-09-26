@@ -51,7 +51,7 @@ public class AddUserActivity extends AppCompatActivity {
             return;
         }
 
-        boolean success = dbHelper.addUser(user, pass, role);
+        boolean success = dbHelper.registerUser(user, pass, role);
         if (success) {
             Toast.makeText(this, "User Created Successfully (" + role + ")", Toast.LENGTH_SHORT).show();
             finish();

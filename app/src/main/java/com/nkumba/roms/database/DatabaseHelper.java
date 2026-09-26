@@ -13,7 +13,7 @@ import java.util.List;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "roms_db";
-    private static final int DATABASE_VERSION = 4; // Version bump for Role-Based Access Control
+    private static final int DATABASE_VERSION = 5;
 
     public static final String TABLE_USERS = "users";
     public static final String TABLE_PRODUCTS = "products";
@@ -22,7 +22,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String KEY_ID = "id";
     public static final String KEY_USERNAME = "username";
     public static final String KEY_PASSWORD = "password";
-    public static final String KEY_ROLE = "role"; // "ADMIN" or "STAFF"
+    public static final String KEY_ROLE = "role";
 
     public static final String KEY_PRODUCT_NAME = "name";
     public static final String KEY_PRODUCT_SKU = "sku";
@@ -73,10 +73,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(CREATE_USERS_TABLE);
         db.execSQL(CREATE_PRODUCTS_TABLE);
         db.execSQL(CREATE_ORDERS_TABLE);
-
-        // Seed default Admin and Staff accounts
-        db.execSQL("INSERT INTO " + TABLE_USERS + " (username, password, role) VALUES('admin', 'admin123', 'ADMIN')");
-        db.execSQL("INSERT INTO " + TABLE_USERS + " (username, password, role) VALUES('staff', 'staff123', 'STAFF')");
     }
 
     @Override
@@ -100,7 +96,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return role;
     }
 
-    public boolean addUser(String username, String password, String role) {
+    public boolean registerUser(String username, String password, String role) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(KEY_USERNAME, username);
