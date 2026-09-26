@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Basic Palette -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- ROMS Brand Colors -->
+    <color name="primary_color">#0284C7</color>
+    <color name="primary_dark">#0369A1</color>
+    <color name="teal_accent">#0D9488</color>
+
+    <!-- High Contrast Surface & Text Colors -->
+    <color name="screen_background">#F8FAFC</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="text_primary">#0F172A</color>
+    <color name="text_secondary">#334155</color>
+    <color name="text_muted">#64748B</color>
+    <color name="text_hint">#94A3B8</color>
 </resources>
